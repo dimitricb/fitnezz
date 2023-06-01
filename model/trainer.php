@@ -1,36 +1,23 @@
 <?php
 
-class Trainer {
+class Trainer
+{
     public $trainerid;
     public $username;
     public $password;
 
 
-    public function _construct($trainerid=null,$username=null,$password=null){
+    public function _construct($trainerid = null, $username = null, $password = null)
+    {
 
-        $this->trainerid=$trainerid;
-        $this->username=$username;
-        $this->password=$password;
-
+        $this->trainerid = $trainerid;
+        $this->username = $username;
+        $this->password = $password;
     }
 
-    public static function logInTrainer($t, mysqli $conn){
-        $query="SELECT * FROM trainer where username='$t->username' and password='$t->password'";
+    public static function logInTrainer(mysqli $conn, $uname, $upass)
+    {
+        $query = "SELECT * FROM trainer where username='$uname' and password='$upass'";
         return $conn->query($query);
     }
-
-
-
-
-
-
-
-
 }
-
-
-
-
-
-
-?>

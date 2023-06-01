@@ -53,7 +53,21 @@ class Program
 		$array = [];
 		while ($r = $result->fetch_assoc()) {
 			$programtype = new ProgramType($r['programtypeid'], $r['programtypename']);
-			$program = new Program($r['programid'], $r['program_name'], $r['duration'], $r['date'], $r['price'], $r['description'], $programtype);
+			$program = new Program($r['programID'], $r['program_name'], $r['duration'], $r['date'], $r['price'], $r['description'], $programtype);
+			array_push($array, $program);
+		}
+		return $array;
+	}
+
+	public static function vratiSveOrder($db, $uslov)
+	{
+		$query = "SELECT * FROM program p JOIN programtype pt ON p.programtypeid=pt.programtypeid ORDER BY program_name ASC" . $uslov;
+		$query = trim($query);
+		$result = $db->query($query) or die($db->error);
+		$array = [];
+		while ($r = $result->fetch_assoc()) {
+			$programtype = new ProgramType($r['programtypeid'], $r['programtypename']);
+			$program = new Program($r['programID'], $r['program_name'], $r['duration'], $r['date'], $r['price'], $r['description'], $programtype);
 			array_push($array, $program);
 		}
 		return $array;
