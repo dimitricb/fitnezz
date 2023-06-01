@@ -1,8 +1,8 @@
 <?php
 include "../dbBroker.php";
 
-$id = $_GET['programid'];
-$sql = "DELETE FROM program WHERE programid='" . $id . "'";
+$programid = $_GET['programid'];
+$sql = "DELETE FROM program WHERE programID='" . $programid . "'";
 $conn->query($sql) or die($sql);
 
-header("Location:pretraga.php");
+header("Location:sviprogrami.php");
