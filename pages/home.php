@@ -28,11 +28,6 @@ include "header.php";
             explicabo, rerum quo aspernatur? Similique pariatur
             reprehenderit numquam?
           </p>
-          <div class="button">
-            <a href="#" class="btn">unos novog programa</a>
-            <a href="#" class="btn">svi programi</a>
-            <a href="#" class="btn">pretraga</a>
-          </div>
         </div>
       </div>
 
@@ -52,11 +47,6 @@ include "header.php";
             explicabo, rerum quo aspernatur? Similique pariatur
             reprehenderit numquam?
           </p>
-          <div class="button">
-            <a href="#" class="btn">unos novog programa</a>
-            <a href="#" class="btn">svi programi</a>
-            <a href="#" class="btn">pretraga</a>
-          </div>
         </div>
       </div>
     </div>

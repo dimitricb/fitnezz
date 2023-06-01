@@ -1,17 +1,14 @@
 <?php
 
-$host="localhost";
-$db="fitnezz";
-$user="root";
-$pass="";
+$host = "localhost";
+$db = "fitnezz";
+$user = "root";
+$pass = "";
 
-$conn=new mysqli($host,$user,$pass,$db);
+$conn = new mysqli($host, $user, $pass, $db);
 
-if($conn->connect_errno){
-exit("Failed connection: ".$conn->connect_error);
+if ($conn->connect_errno) {
+    printf("Konekcija neuspešna: %s\n", $conn->connect_error);
+    exit();
 }
-
-
-
-
-?>
+$conn->set_charset("utf8");
